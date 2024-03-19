@@ -1,21 +1,23 @@
 package org.example.beans;
 
+import org.example.annotation.QuestType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
+import static org.example.annotation.QuestType.Type.*;
 
 @Component
 public class Knight {
 
     @Autowired
-//    @Qualifier("yoyeyo")
-    private Quest dimsel;
+    @QuestType(YoYeYo)
+    private Quest quest;
 
     @Autowired
     private MyInterface myInterface;
 
     public String goQuest() {
-        return dimsel.goQuest();
+        return quest.goQuest();
     }
 
 //    public void setQuest(Quest quest) {
