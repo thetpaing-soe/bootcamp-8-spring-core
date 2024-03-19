@@ -3,18 +3,25 @@ package org.example.beans;
 import org.example.annotation.QuestType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Component;
+
+import java.util.Optional;
+
 import static org.example.annotation.QuestType.Type.*;
 
 @Component
 public class Knight {
 
-    @Autowired
-    @QuestType(YoYeYo)
     private Quest quest;
 
+    private MyClass myClass;
+
     @Autowired
-    private MyInterface myInterface;
+    public Knight(@QuestType(Dimsel) Quest quest, Optional<MyClass> myClass) {
+        this.quest = quest;
+        this.myClass = myClass;
+    }
 
     public String goQuest() {
         return quest.goQuest();
