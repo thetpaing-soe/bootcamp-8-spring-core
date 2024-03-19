@@ -18,7 +18,7 @@ public class Knight {
     private MyClass myClass;
 
     @Autowired
-    public Knight(@QuestType(Dimsel) Quest quest, Optional<MyClass> myClass) {
+    public Knight(@QuestType(Dimsel) Quest quest, @Autowired(required = false) MyClass myClass) {
         this.quest = quest;
         this.myClass = myClass;
     }
