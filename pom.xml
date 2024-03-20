@@ -13,6 +13,7 @@
         <module>di-sample</module>
         <module>spring-di-xml</module>
         <module>di-switch-beans</module>
+        <module>lazy-eager</module>
     </modules>
 
     <properties>
