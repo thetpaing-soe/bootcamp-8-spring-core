@@ -3,8 +3,12 @@ package org.example.bean;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import java.util.logging.Logger;
+
 @Component
 public class SpringBean1 {
+
+    private Logger logger = Logger.getLogger(this.getClass().getSimpleName().toString());
 
     @Value("#{'${app.name}'.toUpperCase()}")
     private String appName;
@@ -39,5 +43,7 @@ public class SpringBean1 {
         System.out.println("Street Name: " + streetName);
         System.out.println("Price: " + price);
         System.out.println("Name: " + name);
+
+        logger.info("AppName: " + appName);
     }
 }
