@@ -5,6 +5,7 @@ import org.example.beans.Knight;
 import org.example.beans.RescuingDimselQuest;
 import org.example.beans.YoYeYoQuest;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Main {
     public static void main(String[] args) {

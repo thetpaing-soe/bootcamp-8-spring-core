@@ -1,6 +1,7 @@
 package org.example.beans;
 
 import org.example.annotation.QuestType;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
